@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ГлобалГранд - Ремонт квартир в Москве и МО | Качество без переплат</title>
+    <meta name="description" content="Профессиональный ремонт квартир в Москве и МО от команды ГлобалГранд. 2+ года опыта, 500+ довольных клиентов, гарантия качества. Консультация бесплатно!" />
+    <meta name="keywords" content="ремонт квартир москва, ремонт квартир московская область, строительство, отделочные работы, косметический ремонт, капитальный ремонт" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:title" content="ГлобалГранд - Ремонт квартир в Москве и МО | Качество без переплат" />
+    <meta property="og:description" content="Профессиональный ремонт квартир в Москве и МО от команды ГлобалГранд. 2+ года опыта, 500+ довольных клиентов, гарантия качества. Консультация бесплатно!" />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://example.com/" />
+    <meta property="twitter:title" content="ГлобалГранд - Ремонт квартир в Москве и МО | Качество без переплат" />
+    <meta property="twitter:description" content="Профессиональный ремонт квартир в Москве и МО от команды ГлобалГранд. 2+ года опыта, 500+ довольных клиентов, гарантия качества. Консультация бесплатно!" />
+    <meta property="twitter:image" content="https://example.com/og-image.jpg" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ГлобалГранд" />
+    <meta name="geo.region" content="RU-MOW" />
+    <meta name="geo.placename" content="Москва" />
+    <meta name="geo.position" content="55.7558;37.6176" />
+    <meta name="ICBM" content="55.7558, 37.6176" />
+    <link rel="canonical" href="https://example.com/" />
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Адаптация для мобильных устройств - отступ снизу для кнопки ИИ-агента */
+      @media (max-width: 640px) {
+        body {
+          padding-bottom: env(safe-area-inset-bottom);
+        }
+        
+        /* Фиксация позиции ИИ-помощника на мобильных - центрирование */
+        #vapi-widget-floating-button {
+          right: auto !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          bottom: 16px !important;
+          z-index: 40 !important;
+        }
+        
+        /* Обеспечиваем правильное отображение виджета на мобильных */
+        [id^="vapi-widget-container"] {
+          max-width: calc(100vw - 32px) !important;
+          width: calc(100vw - 32px) !important;
+          left: 50% !important;
+          right: auto !important;
+          transform: translateX(-50%) !important;
+          bottom: 90px !important;
+          max-height: calc(100vh - 140px) !important;
+          height: auto !important;
+        }
+        
+        /* Центрирование всплывающего окна чата */
+        [id^="vapi-widget"][role="dialog"] {
+          max-width: calc(100vw - 32px) !important;
+          width: calc(100vw - 32px) !important;
+          left: 50% !important;
+          right: auto !important;
+          margin: 0 !important;
+          transform: translateX(-50%) !important;
+          bottom: 90px !important;
+          top: auto !important;
+          max-height: calc(100vh - 140px) !important;
+          height: auto !important;
+          overflow-y: auto !important;
+        }
+        
+        /* Исправление внутренних элементов виджета */
+        [id^="vapi-widget"] > div {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        
+        /* Исправление формы ввода */
+        [id^="vapi-widget"] form,
+        [id^="vapi-widget"] input,
+        [id^="vapi-widget"] textarea,
+        [id^="vapi-widget"] button {
+          max-width: 100% !important;
+        }
+        
+        /* Обеспечиваем видимость всех кнопок внутри виджета */
+        [id^="vapi-widget"] [role="dialog"] > div {
+          padding-bottom: 20px !important;
+        }
+        
+        /* Фиксируем высоту контейнера чата */
+        [id^="vapi-widget"] [role="dialog"] {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+      }
+      
+      /* Для десктопа - стандартное положение справа */
+      @media (min-width: 641px) {
+        #vapi-widget-floating-button {
+          right: 20px !important;
+          bottom: 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Нейро-помощник Widget -->
+    <script 
+      id="readdy-agent-widget"
+      src="https://readdy.ai/api/public/assistant/widget?projectId=95571895-d637-41a5-b28e-2ac6f8eb7f03"
+      mode="hybrid"
+      voice-show-transcript="true"
+      theme="light"
+      size="compact"
+      position="bottom-right"
+      accent-color="#3B82F6"
+      button-base-color="#1F2937"
+      button-accent-color="#FFFFFF"
+      main-label="Нейро-помощник"
+      start-button-text="Начать разговор"
+      end-button-text="Завершить звонок"
+      empty-chat-message="Привет! Я ваш Нейро-помощник по ремонту квартир. Расскажите, какой ремонт планируете, и я помогу с расчётом стоимости и записью на консультацию."
+      empty-voice-message="Нажмите кнопку и расскажите о вашем проекте ремонта. Я помогу с планированием и записью к специалистам."
+      defer
+    ></script>
+  </body>
+</html>
